@@ -66,7 +66,12 @@ def multiply():
 
 
 def decimal():
-    screen['text'] += '.'
+    txt = screen['text']
+
+    if len(txt) == 0 or txt[len(txt)-1] == ' ':
+        screen['text'] += '0.'
+    else:
+        screen['text'] += '.'
 
 
 def clear():
@@ -90,12 +95,12 @@ def delete():
 
 def calculate():
     eqn = screen['text']
+    if len(eqn) > 0:
+        try:
+            screen['text'] = str(postfix_eval(infix_to_postfix(eqn)))
 
-    try:
-        screen['text'] = postfix_eval(infix_to_postfix(eqn))
-
-    except Exception:
-        screen['text'] = 'ERR'
+        except Exception:
+            screen['text'] = 'ERR'
 
 
 
