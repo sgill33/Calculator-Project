@@ -8,9 +8,6 @@ def postfix_eval(input_str: str) -> float:
     Raises an PostfixFormatException if the input is not well-formed"""
 
 
-    if len(input_str) == 0:
-        raise Exception('Insufficient operands')
-
     lst = input_str.split(' ')
     stack = Stack(30)
 
