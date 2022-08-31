@@ -3,6 +3,7 @@ from expr_eval import *
 
 # window and frame initialization
 window = tk.Tk()
+window.title('Calculator')
 frame1 = tk.Frame(master=window, relief=tk.FLAT, borderwidth=5)
 frame2 = tk.Frame(master=window, relief=tk.SUNKEN, borderwidth=5)
 frame3 = tk.Frame(master=window, relief=tk.RAISED, borderwidth=2)

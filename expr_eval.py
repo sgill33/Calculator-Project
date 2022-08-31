@@ -2,11 +2,6 @@ from stack_arr import *
 
 def postfix_eval(input_str: str) -> float:
     """Evaluates a postfix expression"""
-    """Input argument:  a string containing a postfix expression where tokens 
-    are space separated. Tokens are either operators + - * / ** << >> or numbers (integers or floats)
-    Returns the result of the expression evaluation. 
-    Raises an PostfixFormatException if the input is not well-formed"""
-
 
     lst = input_str.split(' ')
     stack = Stack(30)
@@ -50,9 +45,6 @@ def postfix_eval(input_str: str) -> float:
 
 def infix_to_postfix(input_str: str) -> str:
     """Converts an infix expression to an equivalent postfix expression"""
-    """Input argument:  a string containing an infix expression where tokens are 
-    space separated.  Tokens are either operators + - * / ** << >> or numbers (integers or floats)
-    Returns a String containing a postfix expression """
     prec = {}
     prec['x'] = 2
     prec['⁒'] = 2
